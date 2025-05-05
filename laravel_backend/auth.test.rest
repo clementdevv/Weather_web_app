@@ -1,0 +1,40 @@
+
+### Register a new user
+POST http://127.0.0.1:8000/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "dee Doe",
+  "email": "dee@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Login user
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+
+{
+  "email": "dee@example.com",
+  "password": "password"
+}
+
+### Access dashboard with token
+GET http://127.0.0.1:8000/api/dashboard
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 3|ixtmEmBmjuzGMmf6eQEHlL5LRVsPQtLoiR32dsqP908af9cb
+
+### Get user profile with token
+GET http://127.0.0.1:8000/api/user
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 3|ixtmEmBmjuzGMmf6eQEHlL5LRVsPQtLoiR32dsqP908af9cb
+
+### Logout user
+POST http://127.0.0.1:8000/api/logout
+Authorization: Bearer 2|AJ5pQ4XXo5xMtRouWiDvYIy0bcmxrfRobQT6nGfOe68d12e5
+
+
+
